@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:myflutter/common/utils/utils.dart';
 import 'package:myflutter/common/values/values.dart';
 import 'package:myflutter/common/widgets/button.dart';
 import 'package:myflutter/common/widgets/input.dart';
+import 'package:myflutter/common/widgets/toast.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -93,6 +95,9 @@ class _SignInPageState extends State<SignInPage> {
           children: <Widget>[
             _buildLogo(),
             _buildInputForm(),
+            SizedBox(
+              height: 20,
+            ),
             _buildSignupButton(),
             _buildThirdPartyLogin(),
           ],
@@ -126,27 +131,92 @@ class _SignInPageState extends State<SignInPage> {
   //密码的控制器
   final TextEditingController _passController = TextEditingController();
 
-  Widget _buildThirdPartyLogin() {
-    return Container();
+  _handleSignIn() {
+    if (!duIsEmail(_emailController.value.text)) {
+      toasInfo(msg: '请正解输入邮件');
+    }
+    return;
   }
+
+  
 
   Widget _buildSignupButton() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         createButton(
-          title: 'Sign',
-          width: 100,
-        ),
-        
+            title: 'Sign up',
+            width: 120,
+            gbColor: Colors.black87,
+            onPressed: () {}),
+        SizedBox(width: 40.0),
         createButton(
-          title: 'Sign',
-          width: 100,
+          title: 'Sign in',
+          width: 120,
+          onPressed: () {
+            if (!duIsEmail(_emailController.value.text)) {
+              toasInfo(msg: '请正确输入邮件');
+              return;
+            }
+            if (!duCheckStringLength(_passController.value.text, 6)) {
+              toasInfo(msg: '密码不能小于6位');
+              return;
+            }
+          },
         )
       ],
     );
   }
-  // Widget _buildInputForm() {
-  //   return Container();
-  // }
+
+
+
+
+  // 第三方登录
+  Widget _buildThirdPartyLogin() {
+    return Container(
+      width: duSetWidth(295),
+      margin: EdgeInsets.only(bottom: duSetHeight(40)),
+      child: Column(
+        children: <Widget>[
+          // title
+          Text(
+            "Or sign in with social networks",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: AppColors.primaryText,
+              fontFamily: "Avenir",
+              fontWeight: FontWeight.w400,
+              fontSize: duSetFontSize(16),
+            ),
+          ),
+          // 按钮
+          Padding(
+            padding: EdgeInsets.only(top: duSetHeight(20)),
+            child: Row(
+              children: <Widget>[
+                btnFlatButtonBorderOnlyWidget(
+                  onPressed: () {},
+                  width: 88,
+                  iconFileName: "twitter",
+                ),
+                Spacer(),
+                btnFlatButtonBorderOnlyWidget(
+                  onPressed: () {},
+                  width: 88,
+                  iconFileName: "google",
+                ),
+                Spacer(),
+                btnFlatButtonBorderOnlyWidget(
+                  onPressed: () {},
+                  width: 88,
+                  iconFileName: "facebook",
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
 }

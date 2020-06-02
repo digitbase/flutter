@@ -20,6 +20,7 @@ Widget InputContain({
       Container(
         color: AppColors.secondaryElement,
         child: TextField(
+          controller:controller,
           keyboardType: keyboardType,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.fromLTRB(10, 5, 5, 10),
