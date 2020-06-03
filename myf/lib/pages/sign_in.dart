@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:myflutter/common/utils/utils.dart';
 import 'package:myflutter/common/values/values.dart';
+import 'package:myflutter/common/widgets/appbar.dart';
 import 'package:myflutter/common/widgets/button.dart';
 import 'package:myflutter/common/widgets/input.dart';
 import 'package:myflutter/common/widgets/toast.dart';
@@ -87,8 +88,18 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text('Si'),
+      appBar: transparenBar(
+        context: context,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.info_outline),
+            tooltip: 'Open shopping cart',
+            color: AppColors.primaryText,
+            onPressed: () {
+              print('Shopping cart opened.');
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -138,8 +149,6 @@ class _SignInPageState extends State<SignInPage> {
     return;
   }
 
-  
-
   Widget _buildSignupButton() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -167,9 +176,6 @@ class _SignInPageState extends State<SignInPage> {
       ],
     );
   }
-
-
-
 
   // 第三方登录
   Widget _buildThirdPartyLogin() {
@@ -218,5 +224,4 @@ class _SignInPageState extends State<SignInPage> {
       ),
     );
   }
-
 }

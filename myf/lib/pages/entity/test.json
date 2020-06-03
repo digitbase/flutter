@@ -1,0 +1,15 @@
+{
+    "fasdfad": "asdfad",
+    "title": "empty object",
+    "properties": {
+        "email": {
+            "type": "string",
+            "description": "email"
+        },
+        "password": {
+            "type": "string",
+            "description": "密码"
+        }
+    },
+    "required": ["email", "password"]
+}
