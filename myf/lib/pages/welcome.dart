@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myflutter/common/utils/utils.dart';
 import 'package:myflutter/common/values/values.dart';
+import 'package:myflutter/common/widgets/widgets.dart';
 
 class Welcomepage extends StatefulWidget {
   @override
@@ -14,24 +16,8 @@ class _WelcomepageState extends State<Welcomepage> {
     ScreenUtil.init(context,
         width: 375, height: 812 - 70, allowFontScaling: true);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('App bar'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          verticalDirection: VerticalDirection.down,
-          textDirection: TextDirection.rtl,
-          children: <Widget>[
-            _buildPagesHeadTitle(),
-            _buildPagesHeadDetail(),
-            _buildFeatureItem(),
-            _buildSartButtom(),
-          ],
-        ),
-      ),
+    return Container(
+      child: DuSliver(),
     );
   }
 
@@ -61,11 +47,8 @@ class _WelcomepageState extends State<Welcomepage> {
       width: duSetWidth(100),
       color: Colors.blue,
       child: FlatButton(
-        onPressed: (){
-          Navigator.pushNamed(
-          context,
-          '/sign-in'
-           );
+        onPressed: () {
+          Navigator.pushNamed(context, '/sign-in');
         },
         child: Text(
           'Sign In',
