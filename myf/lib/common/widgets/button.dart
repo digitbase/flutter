@@ -35,7 +35,6 @@ Container createButton({
   );
 }
 
-
 /// 第三方按钮
 Widget btnFlatButtonBorderOnlyWidget({
   @required VoidCallback onPressed,
@@ -49,9 +48,9 @@ Widget btnFlatButtonBorderOnlyWidget({
     child: FlatButton(
       onPressed: onPressed,
       shape: RoundedRectangleBorder(
-        // side: Borders.primaryBorder,
-        // borderRadius: Radii.k6pxRadius,
-      ),
+          // side: Borders.primaryBorder,
+          // borderRadius: Radii.k6pxRadius,
+          ),
       child: Image.asset(
         "assets/images/icons-$iconFileName.png",
       ),

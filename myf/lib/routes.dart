@@ -9,4 +9,6 @@ var staticRoutes = {
   '/about': (context) => DuSliver(),
   '/form': (context) => DuFormDemo(),
   '/home': (context) => DuPage(title: 'home'),
+  '/button': (context) => DuButtonDemo(),
+  '/popmenu': (context) => DuPopMenuButtonDemo(),
 };
