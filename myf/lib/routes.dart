@@ -11,4 +11,5 @@ var staticRoutes = {
   '/home': (context) => DuPage(title: 'home'),
   '/button': (context) => DuButtonDemo(),
   '/popmenu': (context) => DuPopMenuButtonDemo(),
+  '/DuForm2Demo': (context) => DuForm2Demo(),
 };
