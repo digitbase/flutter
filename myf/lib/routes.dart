@@ -1,6 +1,5 @@
 import 'package:myflutter/pages/sign_in.dart';
 import 'package:myflutter/pages/sign_up.dart';
-
 import 'common/widgets/widgets.dart';
 
 var staticRoutes = {
@@ -8,5 +7,6 @@ var staticRoutes = {
   "/sign-in": (contxt) => DuPage(title: 'About'),
   "/sign-up": (contxt) => SingUpPage(),
   '/about': (context) => DuSliver(),
+  '/form': (context) => DuFormDemo(),
   '/home': (context) => DuPage(title: 'home'),
 };

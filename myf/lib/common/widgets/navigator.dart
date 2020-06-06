@@ -14,7 +14,7 @@ class DuNavigatorDemo extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/about');
+                Navigator.pushNamed(context, '/form');
               },
               child: Text('About'),
             )
