@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:intl/intl_browser.dart';
 
 class DuNavigatorDemo extends StatelessWidget {
   @override
@@ -24,8 +23,14 @@ class DuNavigatorDemo extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/DuForm2Demo');
               },
-              child: Text('Form2'),
-            )
+              child: Text('Form3'),
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/DateTime');
+              },
+              child: Text('DateTime'),
+            ),
           ],
         ),
       ),
