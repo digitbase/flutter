@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myflutter/common/values/values.dart';
+import 'package:myflutter/common/widgets/widgets.dart';
 
 class DuSliver extends StatelessWidget {
   @override
@@ -36,27 +37,37 @@ class DuSliveListDemo extends StatelessWidget {
             child: Container(
                 child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Stack(children: <Widget>[
-                Image.network(
-                  posts[index].imageUrl,
-                  //fit: BoxFit.contain,
-                ),
-                Positioned(
-                  top: 20,
-                  left: 20,
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+              child: Stack(
+                  alignment: AlignmentDirectional.center,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image.network(posts[index].imageUrl),
                         Text(
                           posts[index].title,
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          ),
+                          style: Theme.of(context).textTheme.title,
                         ),
-                      ]),
-                ),
-              ]),
+                        Text(
+                          posts[index].author,
+                          style: Theme.of(context).textTheme.subtitle,
+                        ),
+                      ],
+                    ),
+                    Positioned.fill(
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          splashColor: Colors.white.withOpacity(0.3),
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) =>
+                                    DuPostShow(posts: posts[index])));
+                          },
+                        ),
+                      ),
+                    ),
+                  ]),
             )),
           );
         },
