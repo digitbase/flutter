@@ -13,4 +13,5 @@ var staticRoutes = {
   '/popmenu': (context) => DuPopMenuButtonDemo(),
   '/DuForm2Demo': (context) => DuForm2Demo(),
   '/DateTime': (context) => DateTimeDemo(),
+  '/SimpleDialog': (context) => DuSimpleDialoge(),
 };
