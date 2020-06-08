@@ -14,4 +14,9 @@ var staticRoutes = {
   '/DuForm2Demo': (context) => DuForm2Demo(),
   '/DateTime': (context) => DateTimeDemo(),
   '/SimpleDialog': (context) => DuSimpleDialoge(),
+  '/chipdemo': (context) => DuChipDemo(),
+  '/dataTable': (context) => DuDataTableDemo(),
+  '/paginateTable': (context) => PaginateTableDemo(),
+  '/card': (context) => DuCardDemo(),
+  '/stepper': (context) => DuStepperDemo(),
 };

@@ -33,9 +33,33 @@ class DuNavigatorDemo extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/SimpleDialog');
+                Navigator.pushNamed(context, '/chipdemo');
               },
-              child: Text('SimpleDialog'),
+              child: Text('Chip'),
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/dataTable');
+              },
+              child: Text('dataTable'),
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/paginateTable');
+              },
+              child: Text('paginateTable'),
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/card');
+              },
+              child: Text('card'),
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/stepper');
+              },
+              child: Text('stepper'),
             ),
           ],
         ),
