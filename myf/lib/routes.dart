@@ -16,4 +16,5 @@ var staticRoutes = {
   '/chipdemo': (context) => DuChipDemo(),
   '/dataTable': (context) => DuDataTableDemo(),
   '/paginateTable': (context) => PaginateTableDemo(),
+  '/card': (context) => DuCardDemo(),
 };

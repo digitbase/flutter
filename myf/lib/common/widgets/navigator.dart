@@ -49,6 +49,12 @@ class DuNavigatorDemo extends StatelessWidget {
               },
               child: Text('paginateTable'),
             ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/card');
+              },
+              child: Text('card'),
+            ),
           ],
         ),
       ),

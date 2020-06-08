@@ -12,3 +12,4 @@ export "./dataSelect.dart";
 export "./chip.dart";
 export "./datatable.dart";
 export "./paginat.dart";
+export "./card.dart";
