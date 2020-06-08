@@ -10,3 +10,4 @@ export "./popmenu.dart";
 export "./form2.dart";
 export "./dataSelect.dart";
 export "./chip.dart";
+export "./datatable.dart";

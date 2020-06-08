@@ -37,6 +37,12 @@ class DuNavigatorDemo extends StatelessWidget {
               },
               child: Text('Chip'),
             ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/dataTable');
+              },
+              child: Text('dataTable'),
+            ),
           ],
         ),
       ),

@@ -14,4 +14,5 @@ var staticRoutes = {
   '/DuForm2Demo': (context) => DuForm2Demo(),
   '/DateTime': (context) => DateTimeDemo(),
   '/chipdemo': (context) => DuChipDemo(),
+  '/dataTable': (context) => DuDataTableDemo(),
 };
