@@ -15,4 +15,5 @@ var staticRoutes = {
   '/DateTime': (context) => DateTimeDemo(),
   '/chipdemo': (context) => DuChipDemo(),
   '/dataTable': (context) => DuDataTableDemo(),
+  '/paginateTable': (context) => PaginateTableDemo(),
 };

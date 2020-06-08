@@ -11,3 +11,4 @@ export "./form2.dart";
 export "./dataSelect.dart";
 export "./chip.dart";
 export "./datatable.dart";
+export "./paginat.dart";
