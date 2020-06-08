@@ -13,3 +13,4 @@ export "./chip.dart";
 export "./datatable.dart";
 export "./paginat.dart";
 export "./card.dart";
+export "./stepper.dart";
