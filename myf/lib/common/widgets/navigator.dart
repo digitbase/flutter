@@ -31,6 +31,12 @@ class DuNavigatorDemo extends StatelessWidget {
               },
               child: Text('DateTime'),
             ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/chipdemo');
+              },
+              child: Text('Chip'),
+            ),
           ],
         ),
       ),
