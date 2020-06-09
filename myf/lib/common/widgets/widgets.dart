@@ -15,3 +15,4 @@ export "./datatable.dart";
 export "./paginat.dart";
 export "./card.dart";
 export "./stepper.dart";
+export "./status.dart";

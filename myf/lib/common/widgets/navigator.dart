@@ -61,6 +61,12 @@ class DuNavigatorDemo extends StatelessWidget {
               },
               child: Text('stepper'),
             ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/statusful');
+              },
+              child: Text('statusful'),
+            ),
           ],
         ),
       ),

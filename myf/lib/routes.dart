@@ -19,4 +19,7 @@ var staticRoutes = {
   '/paginateTable': (context) => PaginateTableDemo(),
   '/card': (context) => DuCardDemo(),
   '/stepper': (context) => DuStepperDemo(),
+  '/statusless': (context) => DuStatusLessDemo(),
+  '/statusful': (context) => DuStatusFulDemo(),
+  '/statusful': (context) => DuStremDemo(),
 };
